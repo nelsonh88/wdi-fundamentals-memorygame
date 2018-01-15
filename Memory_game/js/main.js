@@ -14,3 +14,5 @@ if (cardsInPlay.length === 2){
 		alert("Sorry, try again.");
 	}
 }
+
+ console.log("Cutie");
