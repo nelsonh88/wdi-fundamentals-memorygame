@@ -26,12 +26,13 @@ var numGamesPlayed = 0;
 var wins = 0;
 var losses = 0;
 
+// the following function is used to shuffle the cards array using the array sort function
 function shuffleCards() {
     cards.sort(function() { return 0.5 - Math.random() });
 }
 
 function resetGame() {
-    cardsInPlay = [];
+    cardsInPlay = []; // empty the global cards array so nothing is in there
     var elem = document.getElementById("game-board");
     while (elem.firstChild) {
         elem.removeChild(elem.firstChild);
@@ -40,15 +41,15 @@ function resetGame() {
 }
 
 function checkForMatch() {
-    numGamesPlayed++;
+    numGamesPlayed++; // increase the number of games played by 1 each time
     document.getElementById('numGamesPlayed').textContent = numGamesPlayed;
     if (cardsInPlay[0] === cardsInPlay[1]) {
-        wins++;
-        document.getElementById('wins').textContent = wins;
+        wins++; // increase the number of wins by 1
+        document.getElementById('wins').textContent = wins; // update the DOM with the new number of wins
         alert("You found a match!");
     } else {
-        losses++;
-        document.getElementById('losses').textContent = losses;
+        losses++; // increase the number of losses by 1
+        document.getElementById('losses').textContent = losses; // update the DOM with the new number of losses
         alert("Sorry, try again.");
     }
     resetGame();
@@ -63,12 +64,12 @@ function flipCard() {
     console.log(cards[cardId].cardImage);
     console.log("Cards in play: " + cardsInPlay);
     if (cardsInPlay.length === 2) {
-        setTimeout("checkForMatch()", 200);
+        setTimeout("checkForMatch()", 100);
     }
 }
 
 function createBoard() {
-    shuffleCards();
+    shuffleCards(); // randomize cards array
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
         cardElement.setAttribute("src", "images/back.png");
