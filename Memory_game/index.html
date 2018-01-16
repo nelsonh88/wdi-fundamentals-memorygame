@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet" type="text/css">
-	<title>Memory Card Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>Memory Card Game</title>
 </head>
+
 <body>
-	<header>
-		<h1>Nelson's Memory Card Game</h1>
-	</header>
-	<nav>
-		<a href="#">Instructions</a>
-		<a href="#">Game</a>
-	</nav>
-	<main>
-		<h2>Instructions</h2>
-		<p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
-			<div id="game-board" class="board clearfix"></div>
-			<button id="reset" onclick="resetGame()">Reset Game</button>
-		</p>
-	</main>
-	<footer class="clearfix">
-		<p class="copyright">Copyright 2017
-		</p>
-		<p class="message">
-		Created with &hearts; by <span class="name">GA</span>
-		</p>
-	</footer>
-	<script src="js/main.js"></script>
+    <header>
+        <h1>Nelson's Memory Card Game</h1>
+    </header>
+    <nav>
+        <a href="#">Instructions</a>
+        <a href="#">Game</a>
+    </nav>
+    <main>
+        <h2>Instructions</h2>
+        <p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the
+            game is to turn over pairs of matching cards.
+            <div class="score">
+                <h3>Score Tally</h3>
+                <ul>
+                    <li>Number of Games Played: <span id="numGamesPlayed">0</span></li>
+                    <li>Wins: <span id="wins">0</span></li>
+                    <li>Losses: <span id="losses">0</span></li>
+                </ul>
+            </div>
+            <div id="game-board" class="board clearfix"></div>
+            <button id="reset" onclick="resetGame()">Reset Game</button>
+        </p>
+    </main>
+    <footer class="clearfix">
+        <p class="copyright">Copyright 2017
+        </p>
+        <p class="message">
+            Created with &hearts; by <span class="name">GA</span>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
